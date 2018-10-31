@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "version": "2.0.0",
+  "description": "tesing purpose",
+  "main": "test",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "local"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "kk",
+  "license": "UNLICENCED"
+}
