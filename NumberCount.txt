@@ -1,0 +1,55 @@
+public class NumberCount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "1ajk24";
+		char[] chArray = s.toCharArray();
+		int prev = 0;
+		int current = 0;
+		int sum = 0;
+		int count = 0;
+		boolean charFound = true;
+		int length=chArray.length;
+		for (int i = 0; i < length; i++) {
+
+			if (chArray[i] == '0' || chArray[i] == '1' || chArray[i] == '2'
+					|| chArray[i] == '3' || chArray[i] == '4'
+					|| chArray[i] == '5' || chArray[i] == '6'
+					|| chArray[i] == '7' || chArray[i] == '8'
+					|| chArray[i] == '9') {
+				charFound = false;
+				count++;
+				current = Integer.parseInt(chArray[i] + "");
+				if (count > 1) {
+
+					prev = prev * 10 + current;
+
+				} else {
+						prev = current;
+
+				}
+				//
+			} else {
+
+				if (!charFound) {
+					sum +=  prev;
+					//System.out.println("sum" + sum);
+				}
+
+				prev = 0;
+				count = 0;
+				charFound = true;
+			}
+			//System.out.println("prev" + prev);
+			if(i==length-1)
+			{
+				sum +=   prev;
+			}
+			//System.out.println("sum" + sum);
+		}
+
+		System.out.println(sum);
+
+	}
+
+}
